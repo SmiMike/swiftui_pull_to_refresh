@@ -1,4 +1,4 @@
-# swiftui_pull_to_refresh
+# Swiftui pull to refresh
 Custom pull to refresh scrollview swiftui 
 
 
