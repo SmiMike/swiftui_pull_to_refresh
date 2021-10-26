@@ -34,7 +34,7 @@ struct Refresh {
 
 struct Home : View {
     
-    @State var arr = ["item1","item2","item3"] //,"item4","item5","item1","item2","item3","item4","item5"]
+    @State var arr = ["item1","item2","item3"]
     
     @State var refresh:Refresh = Refresh(startOffset: 0, offset: 0, started: false, released: false)
     
@@ -43,8 +43,6 @@ struct Home : View {
         
         VStack(spacing:0)
         {
-            
-            
             HStack
             {
                 Text("Pull to refresh")
@@ -98,10 +96,6 @@ struct Home : View {
                             refresh.invalid = false
                             updateDataScrollView();
                         }
-                        
-                        
-                        
-                        
                     }
                     return AnyView(Color.black.frame(width: 0, height: 0))
                 }
@@ -124,7 +118,7 @@ struct Home : View {
                             .foregroundColor(mainColor)
                             .rotationEffect(.init(degrees: refresh.started ? 180 : 0))
                             .offset(x: 0, y: -30)
-                            .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                            .animation(.easeIn)
                     }
                     
                     
@@ -181,14 +175,7 @@ struct Home : View {
                 {
                     refresh.invalid = true
                 }
-                
-                
-                
             }
-            
         }
-        
-        
     }
-
 }
