@@ -34,7 +34,7 @@ struct Refresh {
 
 struct Home : View {
     
-    @State var arr = ["item1","item2","item3"]//,"item4","item5","item1","item2","item3","item4","item5"]
+    @State var arr = ["item1","item2","item3"] //,"item4","item5","item1","item2","item3","item4","item5"]
     
     @State var refresh:Refresh = Refresh(startOffset: 0, offset: 0, started: false, released: false)
     
